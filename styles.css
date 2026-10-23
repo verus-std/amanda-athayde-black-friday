@@ -253,3 +253,6 @@ h1,h2{text-wrap:balance}
 @media(max-width:680px){#signup-form .cta{min-height:72px}}
 
 .original-price{text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-color:currentColor}
+
+.original-total{position:relative;width:max-content;max-width:100%;text-decoration:none}
+.original-total::after{content:'';position:absolute;left:0;right:0;top:55%;height:3px;background:currentColor;pointer-events:none}
