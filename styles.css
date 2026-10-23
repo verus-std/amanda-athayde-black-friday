@@ -272,3 +272,9 @@ h1,h2{text-wrap:balance}
 .hero-shade{top:auto;bottom:0;height:420px;background:linear-gradient(180deg,#08090c 0%,transparent 14%,transparent 60%,#08090c 100%);z-index:1}
 .hero-caption{top:auto;bottom:26px;right:20px;left:auto;max-width:250px;padding:10px 13px;z-index:2}
 }
+
+/* Condição especial ainda não revelada. */
+.offer-mystery{display:flex;align-items:baseline;gap:16px;margin-top:18px;color:var(--text)}
+.offer-mystery>span{font-size:20px;font-weight:800;letter-spacing:2px}
+.offer-mystery>strong{font-family:var(--display);font-size:88px;font-weight:600;line-height:1}
+@media(max-width:680px){.offer-mystery{margin-top:12px}.offer-mystery>strong{font-size:72px}}
