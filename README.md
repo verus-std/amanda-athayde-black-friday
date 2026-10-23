@@ -36,3 +36,10 @@ Card da pós-graduação: biblioteca jurídica, Unsplash.
 - Ponto focal responsivo na hero e degradê inferior para o fundo.
 - Cards dos módulos com empilhamento sticky somente no celular; rolagem normal para usuários com preferência por movimento reduzido.
 - Faixas preenchidas conforme a largura do viewport, inclusive após carregar as fontes e redimensionar.
+
+## Compartilhamento
+
+- Arte Open Graph: `assets/compartilhamento-black-friday-v1.jpg`, 1200 × 630 px.
+- Metadados Open Graph e Twitter Card em `index.html`, com URLs públicas absolutas.
+- Fonte de composição reproduzível: `scripts/render-share-card.swift` (macOS, AppKit, Etna instalada e Figtree em assets/fonts/).
+- Após publicar, redes podem manter uma prévia anterior em cache por algum tempo.
