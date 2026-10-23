@@ -12,7 +12,7 @@ Execute `python3 -m http.server 8080` e abra http://localhost:8080.
 - Contagem regressiva para 17/11/2026 às 20h, horário de Brasília.
 - Botões abrem um formulário de demonstração com nome, e-mail e WhatsApp, validação local e confirmação simulada. Nenhum dado é enviado, armazenado ou integrado ao WhatsApp.
 - A numeração 01, 02 e 08 dos conteúdos segue o documento original.
-- Foto fornecida pelo cliente, convertida em JPEG para reduzir o tamanho.
+- Hero com o PNG original fornecido pelo cliente; retrato da bio otimizado em JPEG.
 
 Hospedagem: GitHub Pages, branch `main`, diretório raiz.
 
@@ -30,3 +30,9 @@ Card da pós-graduação: biblioteca jurídica, Unsplash.
 - Textos com tamanho mínimo de 16px em desktop e celular.
 - Divisórias SVG originais fornecidas pelo cliente em assets/.
 - Faixa dupla com blur e identificação da hero sobre painel escuro com efeito de vidro.
+
+## Ajustes mobile
+
+- Ponto focal responsivo na hero e degradê inferior para o fundo.
+- Cards dos módulos com empilhamento sticky somente no celular; rolagem normal para usuários com preferência por movimento reduzido.
+- Faixas preenchidas conforme a largura do viewport, inclusive após carregar as fontes e redimensionar.

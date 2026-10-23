@@ -33,3 +33,24 @@ signupForm.addEventListener('submit', event => {
 dialog.addEventListener('close', resetSignup);
 document.querySelectorAll('.close-dialog, .close-preview').forEach(button => button.addEventListener('click', () => dialog.close()));
 dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
+
+// Preenche as duas faixas inclusive em monitores largos.
+const ribbonLanes = [...document.querySelectorAll('.ribbon > div')];
+const ribbonSeeds = ribbonLanes.map(lane => lane.innerHTML);
+function fillRibbons() {
+  const targetWidth = window.innerWidth * 2 + 160;
+  ribbonLanes.forEach((lane, index) => {
+    lane.innerHTML = ribbonSeeds[index];
+    for (let repeat = 0; lane.scrollWidth < targetWidth && repeat < 16; repeat++) {
+      lane.insertAdjacentHTML('beforeend', ' ' + ribbonSeeds[index]);
+    }
+  });
+}
+fillRibbons();
+document.fonts.ready.then(fillRibbons);
+let ribbonFrame;
+window.addEventListener('resize', () => {
+  cancelAnimationFrame(ribbonFrame);
+  ribbonFrame = requestAnimationFrame(fillRibbons);
+});
+document.querySelectorAll('.modules > .module').forEach((card, index) => card.style.setProperty('--stack-order', index));
