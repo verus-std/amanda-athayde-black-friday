@@ -75,3 +75,13 @@ html,body{overflow-x:clip}
 
 /* Contraste constante da chamada sobre a foto clara. */
 .portrait-label>span{display:inline-block;max-width:100%;padding:9px 12px;background:#101522;color:#fff;border-left:2px solid var(--red);border-radius:2px;font-weight:700;line-height:1.6;letter-spacing:1.5px}
+
+/* Unificação dos CTAs e leitura do aviso no celular. */
+.cta{background:#35e58b;color:#062d1a}
+.cta:hover{background:#58f3a3;box-shadow:0 8px 30px #35e58b26}
+.cta:focus-visible{outline-color:#35e58b}
+@media(max-width:680px){
+.reveal-label{font-size:10px;line-height:1.55;letter-spacing:.4px;max-width:145px}
+.countdown-inner{gap:12px;min-height:82px}
+.reveal-label i{width:7px;height:7px}
+}
