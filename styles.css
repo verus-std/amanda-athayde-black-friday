@@ -231,3 +231,14 @@ h1,h2{text-wrap:balance}
 @media(prefers-reduced-motion:reduce){
 .modules>.module{position:relative;top:auto}
 }
+
+/* Aviso do contador sem quebra em telas de desktop. */
+@media(min-width:681px){
+.reveal-label{max-width:none;white-space:nowrap;flex-shrink:0}
+.countdown-inner{gap:24px}
+}
+@media(min-width:681px) and (max-width:1050px){
+.countdown-inner{justify-content:center;gap:12px}
+.countdown{gap:8px}
+.countdown>div{min-width:48px}
+}
