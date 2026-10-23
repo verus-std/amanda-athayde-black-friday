@@ -85,3 +85,8 @@ html,body{overflow-x:clip}
 .countdown-inner{gap:12px;min-height:82px}
 .reveal-label i{width:7px;height:7px}
 }
+@media(max-width:360px){
+.countdown-inner{flex-direction:column;justify-content:center;gap:10px;padding-block:12px}
+.reveal-label{max-width:none;font-size:10px}
+.countdown{gap:15px}
+}
