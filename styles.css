@@ -256,3 +256,11 @@ h1,h2{text-wrap:balance}
 
 .original-total{position:relative;width:max-content;max-width:100%;text-decoration:none}
 .original-total::after{content:'';position:absolute;left:0;right:0;top:55%;height:3px;background:currentColor;pointer-events:none}
+
+/* Inscrição acessível na primeira tela do celular. */
+.first-fold-action{display:none}
+@media(max-width:680px){
+.first-fold-action:not([hidden]){display:block;position:fixed;z-index:20;bottom:0;left:0;right:0;padding:14px 20px calc(14px + env(safe-area-inset-bottom,0px));background:linear-gradient(180deg,rgba(8,9,12,.82),#08090c);border-top:1px solid #ffffff14;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.first-fold-action .cta{width:100%;min-height:76px;font-size:16px;line-height:1.4;box-shadow:0 4px 30px #ffffff14}
+body:has(dialog[open]) .first-fold-action{display:none}
+}
