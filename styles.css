@@ -128,3 +128,9 @@ html,body{overflow-x:clip}
 .course-value{max-width:none;margin-top:23px;padding-top:20px;justify-content:space-between}
 .course-value strong{font-size:20px}
 }
+
+/* Imagem de banco para representar a formação jurídica. */
+.course-visual>img{object-position:center;filter:saturate(.65) brightness(.8)}
+.course-feature .course-visual>img{object-position:center}
+.course-visual-shade{background:linear-gradient(90deg,#14161c,transparent 55%),linear-gradient(0deg,#14161caa,transparent 60%)}
+@media(max-width:680px){.course-feature .course-visual-shade{background:linear-gradient(0deg,#14161c,transparent 70%)}}

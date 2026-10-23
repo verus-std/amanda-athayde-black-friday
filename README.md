@@ -15,3 +15,10 @@ Execute `python3 -m http.server 8080` e abra http://localhost:8080.
 - Foto fornecida pelo cliente, convertida em JPEG para reduzir o tamanho.
 
 Hospedagem: GitHub Pages, branch `main`, diretório raiz.
+
+## Imagem de banco
+
+Card da pós-graduação: biblioteca jurídica, Unsplash.
+- Fonte: https://unsplash.com/s/photos/law-book
+- Arquivo: https://images.unsplash.com/photo-1575282343536-469af953c6e7
+- Licença: https://unsplash.com/license
