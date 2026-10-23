@@ -72,3 +72,6 @@ html,body{overflow-x:clip}
 #signup-dialog h2{font-size:32px;padding-right:10px}
 #signup-form .cta{font-size:14px;min-height:72px}
 }
+
+/* Contraste constante da chamada sobre a foto clara. */
+.portrait-label>span{display:inline-block;max-width:100%;padding:9px 12px;background:#101522;color:#fff;border-left:2px solid var(--red);border-radius:2px;font-weight:700;line-height:1.6;letter-spacing:1.5px}
