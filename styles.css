@@ -30,3 +30,15 @@ html,body{overflow-x:clip}
 .note-mark .icon,.offer-star .icon{display:block}
 .audience-art .icon{width:12px;height:12px;vertical-align:middle}
 .close-dialog .icon{display:block;width:24px;height:24px}
+
+/* Texto dos botões com largura própria e quebras equilibradas. */
+.cta .cta-label{font:inherit;line-height:inherit;flex:1 1 auto;min-width:0;text-wrap:balance}
+.cta .cta-arrow{flex:0 0 auto}
+.mobile-break{display:none}
+@media(max-width:680px){
+.cta{font-size:14px;line-height:1.45;letter-spacing:0;padding:20px 18px;gap:14px;min-height:76px}
+.cta .cta-arrow{font-size:24px}
+.cta .cta-label{font-size:inherit;font-weight:800}
+.hero .cta{min-height:84px}
+.mobile-break{display:block}
+}
