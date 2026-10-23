@@ -10,7 +10,7 @@ Execute `python3 -m http.server 8080` e abra http://localhost:8080.
 
 - Copy das seções preservada a partir do documento fornecido; `copy-original.txt` guarda a referência recebida.
 - Contagem regressiva para 17/11/2026 às 20h, horário de Brasília.
-- Botões abrem um aviso de protótipo. Não há coleta de dados, checkout ou integração com WhatsApp.
+- Botões abrem um formulário de demonstração com nome, e-mail e WhatsApp, validação local e confirmação simulada. Nenhum dado é enviado, armazenado ou integrado ao WhatsApp.
 - A numeração 01, 02 e 08 dos conteúdos segue o documento original.
 - Foto fornecida pelo cliente, convertida em JPEG para reduzir o tamanho.
 

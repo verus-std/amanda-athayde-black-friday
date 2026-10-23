@@ -8,6 +8,28 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 const dialog = document.querySelector('#signup-dialog');
-document.querySelectorAll('[data-signup]').forEach(button => button.addEventListener('click', () => dialog.showModal()));
+const signupForm = document.querySelector('#signup-form');
+const signupEntry = document.querySelector('#signup-entry');
+const signupSuccess = document.querySelector('#signup-success');
+function resetSignup() {
+  signupForm.reset();
+  signupEntry.hidden = false;
+  signupSuccess.hidden = true;
+  dialog.setAttribute('aria-labelledby', 'dialog-title');
+}
+document.querySelectorAll('[data-signup]').forEach(button => button.addEventListener('click', () => {
+  resetSignup();
+  dialog.showModal();
+}));
+signupForm.addEventListener('submit', event => {
+  event.preventDefault();
+  signupForm.reset();
+  signupEntry.hidden = true;
+  signupSuccess.hidden = false;
+  dialog.setAttribute('aria-labelledby', 'success-title');
+  document.querySelector('#success-title').focus();
+  dialog.scrollTop = 0;
+});
+dialog.addEventListener('close', resetSignup);
 document.querySelectorAll('.close-dialog, .close-preview').forEach(button => button.addEventListener('click', () => dialog.close()));
 dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });

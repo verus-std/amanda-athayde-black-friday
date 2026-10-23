@@ -42,3 +42,33 @@ html,body{overflow-x:clip}
 .hero .cta{min-height:84px}
 .mobile-break{display:block}
 }
+
+/* Inscrição demonstrativa e acesso ao grupo. */
+.cta-whatsapp{background:#35e58b;color:#062d1a}
+.cta-whatsapp:hover{background:#58f3a3;box-shadow:0 8px 30px #35e58b26}
+.cta-whatsapp:focus-visible{outline-color:#35e58b}
+[hidden]{display:none!important}
+#signup-dialog{width:min(520px,calc(100% - 32px));max-height:calc(100dvh - 32px);padding:32px 36px;overflow-y:auto}
+#signup-dialog h2{font-size:34px;line-height:1.08;margin:18px 0 14px}
+#signup-dialog .dialog-date{font-size:11px;color:#d4d4dc;margin-bottom:15px}
+#signup-dialog .form-intro{font-size:12px;line-height:1.7;margin-bottom:18px}
+#signup-form{display:flex;flex-direction:column}
+#signup-form label{font-size:12px;font-weight:700;margin:0 0 7px}
+#signup-form label small{font-size:10px;font-weight:400;color:#b7b8c0;margin-left:4px}
+#signup-form input{width:100%;min-height:48px;background:#1a1d26;border:1px solid #414551;border-radius:4px;color:#fff;padding:12px 14px;font:400 16px var(--body);margin:0 0 16px}
+#signup-form input::placeholder{color:#9d9fab;font-size:13px}
+#signup-form input:focus{outline:2px solid #35e58b;outline-offset:2px;border-color:#35e58b}
+#signup-form .cta{width:100%;margin-top:5px;min-height:62px}
+#signup-dialog .prototype-note{font-size:10px;line-height:1.6;color:#9d9fab;margin:12px 0 0;text-align:center}
+#signup-success .success-icon{display:grid;place-items:center;width:54px;height:54px;border:1px solid #35e58b66;border-radius:50%;background:#35e58b12;color:#35e58b;margin-top:22px;font-size:32px}
+#signup-success>p{font-size:13px;line-height:1.8}
+.group-preview{display:flex;align-items:center;gap:14px;border:1px solid #35e58b55;background:#35e58b09;border-radius:5px;padding:18px;margin:22px 0}
+.group-preview>.icon{font-size:32px;color:#35e58b}
+.group-preview strong{display:block;font-size:12px}
+.group-preview span{display:block;font-size:10px;color:#b7b8c0;line-height:1.6;margin-top:4px}
+#signup-success .close-preview{margin-top:22px;width:100%}
+@media(max-width:680px){
+#signup-dialog{padding:28px 22px}
+#signup-dialog h2{font-size:32px;padding-right:10px}
+#signup-form .cta{font-size:14px;min-height:72px}
+}
