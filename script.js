@@ -54,21 +54,3 @@ window.addEventListener('resize', () => {
   ribbonFrame = requestAnimationFrame(fillRibbons);
 });
 document.querySelectorAll('.modules > .module').forEach((card, index) => card.style.setProperty('--stack-order', index));
-
-// Mostra o mesmo CTA já na primeira tela, até o botão original ficar visível.
-const firstFoldAction = document.querySelector('#first-fold-action');
-const heroSection = document.querySelector('.hero');
-const heroAction = document.querySelector('.hero [data-signup]');
-const mobileViewport = window.matchMedia('(max-width: 680px)');
-function updateFirstFoldAction() {
-  const heroRect = heroSection.getBoundingClientRect();
-  const actionRect = heroAction.getBoundingClientRect();
-  const actionVisible = actionRect.top < window.innerHeight && actionRect.bottom > 0;
-  firstFoldAction.hidden = !mobileViewport.matches || heroRect.bottom <= 0 || heroRect.top >= window.innerHeight || actionVisible;
-}
-const firstFoldObserver = new IntersectionObserver(updateFirstFoldAction);
-firstFoldObserver.observe(heroSection);
-firstFoldObserver.observe(heroAction);
-mobileViewport.addEventListener('change', updateFirstFoldAction);
-window.addEventListener('resize', updateFirstFoldAction);
-updateFirstFoldAction();
