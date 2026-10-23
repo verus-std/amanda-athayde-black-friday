@@ -242,3 +242,12 @@ h1,h2{text-wrap:balance}
 .countdown{gap:8px}
 .countdown>div{min-width:48px}
 }
+
+/* Novo tratamento visual dos botões de ação. */
+.cta,.cta-whatsapp,.cta-light{background:linear-gradient(103.31deg,#9affcb 8.16%,#35e58b 91.84%);border:1px solid #fff;box-shadow:0 4px 58.3px rgba(255,255,255,.17);border-radius:88px;color:#062d1a;padding:20px 26px;gap:24px;min-height:68px}
+.cta:hover,.cta-whatsapp:hover,.cta-light:hover{background:linear-gradient(103.31deg,#adffd6 8.16%,#46ee9a 91.84%);box-shadow:0 6px 58.3px rgba(255,255,255,.23)}
+@media(max-width:680px){
+.cta,.cta-whatsapp,.cta-light{padding:20px 24px;gap:16px}
+}
+#signup-form .cta{min-height:68px}
+@media(max-width:680px){#signup-form .cta{min-height:72px}}
