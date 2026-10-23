@@ -22,3 +22,11 @@ Card da pós-graduação: biblioteca jurídica, Unsplash.
 - Fonte: https://unsplash.com/s/photos/law-book
 - Arquivo: https://images.unsplash.com/photo-1575282343536-469af953c6e7
 - Licença: https://unsplash.com/license
+
+## Revisão visual
+
+- Títulos: Etna X Condensed, servida pelo kit Adobe Fonts fornecido pelo cliente: https://use.typekit.net/smw0jjj.css
+- Textos: Figtree variável, instalada localmente e incluída em assets/fonts/.
+- Textos com tamanho mínimo de 16px em desktop e celular.
+- Divisórias SVG originais fornecidas pelo cliente em assets/.
+- Faixa dupla com blur e identificação da hero sobre painel escuro com efeito de vidro.
