@@ -33,6 +33,14 @@ body{font-size:16px;line-height:1.8}h1,h2,h3{font-family:var(--body);text-transf
 .dgrid .testimonial-print{padding:0;overflow:hidden;background:transparent;border:1px solid #314153;border-radius:6px;min-width:0}
 .dgrid .testimonial-print:before{content:none}
 .testimonial-print img{display:block;width:100%;height:auto}
+
+.print-zoom{display:block;width:100%;padding:0;border:0;background:#152132;color:#dce8d8;cursor:zoom-in;text-align:left;font:500 12px var(--body)}
+.print-zoom span{display:block;padding:13px 15px;border-top:1px solid #314153}.print-zoom:focus-visible{outline:3px solid #a8c4a5;outline-offset:-3px}
+.print-modal{width:min(960px,calc(100% - 24px));max-height:92dvh;padding:0;border:1px solid #526875;border-radius:8px;background:#101828;color:#fff;overflow:auto;overscroll-behavior:contain}
+.print-modal::backdrop{background:#020711e8}.print-modal-head{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:20px;background:#101828;padding:12px 18px;border-bottom:1px solid #314153;z-index:1}
+.print-modal-head h2{font:500 16px var(--body);letter-spacing:0}.print-modal-close{padding:10px 14px;border:1px solid #526875;border-radius:4px;background:#1a293c;color:#fff;font:500 14px var(--body);cursor:pointer}
+.print-modal-close:focus-visible{outline:2px solid #a8c4a5;outline-offset:2px}.print-modal-image{display:block;width:100%;height:auto;margin:auto}body.print-modal-open{overflow:hidden}
+@media(max-width:767px){.print-modal{width:calc(100% - 12px);max-height:96dvh}.print-modal-head{padding:8px 12px}}
 </style>
 </head>
 <body>
@@ -119,10 +127,10 @@ body{font-size:16px;line-height:1.8}h1,h2,h3{font-family:var(--body);text-transf
  <div class="wrap">
   <span class="eyebrow">04 / Experiências que inspiram</span><h2>Quem estudou com a Amanda conta o que mudou.</h2>
   <div class="dgrid">
-   <figure class="testimonial-print"><img src="assets/v2/depoimento-1.png" alt="Depoimento 1: mensagem original enviada à professora Amanda Athayde" loading="lazy"></figure>
-   <figure class="testimonial-print"><img src="assets/v2/depoimento-2.png" alt="Depoimento 2: mensagem original enviada à professora Amanda Athayde" loading="lazy"></figure>
-   <figure class="testimonial-print"><img src="assets/v2/depoimento-3.png" alt="Depoimento 3: mensagem original enviada à professora Amanda Athayde" loading="lazy"></figure>
-   <figure class="testimonial-print"><img src="assets/v2/depoimento-4.png" alt="Depoimento 4: mensagem original enviada à professora Amanda Athayde" loading="lazy"></figure>
+   <figure class="testimonial-print"><button type="button" class="print-zoom" data-print="assets/v2/depoimento-1.png" aria-label="Ampliar depoimento 1"><img src="assets/v2/depoimento-1.png" alt="Depoimento 1: mensagem original enviada à professora Amanda Athayde" loading="lazy"><span>Ampliar para ler ↗</span></button></figure>
+   <figure class="testimonial-print"><button type="button" class="print-zoom" data-print="assets/v2/depoimento-2.png" aria-label="Ampliar depoimento 2"><img src="assets/v2/depoimento-2.png" alt="Depoimento 2: mensagem original enviada à professora Amanda Athayde" loading="lazy"><span>Ampliar para ler ↗</span></button></figure>
+   <figure class="testimonial-print"><button type="button" class="print-zoom" data-print="assets/v2/depoimento-3.png" aria-label="Ampliar depoimento 3"><img src="assets/v2/depoimento-3.png" alt="Depoimento 3: mensagem original enviada à professora Amanda Athayde" loading="lazy"><span>Ampliar para ler ↗</span></button></figure>
+   <figure class="testimonial-print"><button type="button" class="print-zoom" data-print="assets/v2/depoimento-4.png" aria-label="Ampliar depoimento 4"><img src="assets/v2/depoimento-4.png" alt="Depoimento 4: mensagem original enviada à professora Amanda Athayde" loading="lazy"><span>Ampliar para ler ↗</span></button></figure>
   </div>
   <button type="button" class="btn" aria-disabled="true">Quero me inscrever</button>
  </div>
@@ -185,5 +193,37 @@ body{font-size:16px;line-height:1.8}h1,h2,h3{font-family:var(--body);text-transf
 <footer><div class="wrap"><img class="footer-logo" src="assets/v2/logo-pos.webp" alt="Pós em Direito Concorrencial"><span>Amanda Athayde · Direito Concorrencial · 2026</span></div></footer>
 
 
+<dialog class="print-modal" id="print-modal" aria-labelledby="print-modal-title">
+ <div class="print-modal-head"><h2 id="print-modal-title">Depoimento</h2><button class="print-modal-close" type="button" aria-label="Fechar depoimento ampliado">Fechar ×</button></div>
+ <img class="print-modal-image" alt="">
+</dialog>
+<script>
+(() => {
+ const modal = document.getElementById('print-modal');
+ const image = modal.querySelector('.print-modal-image');
+ const title = document.getElementById('print-modal-title');
+ let trigger;
+ document.querySelectorAll('.print-zoom').forEach((button, index) => {
+  button.addEventListener('click', () => {
+   trigger = button;
+   image.src = button.dataset.print;
+   image.alt = button.querySelector('img').alt;
+   title.textContent = 'Depoimento ' + (index + 1);
+   modal.showModal();
+   modal.scrollTop = 0;
+   document.body.classList.add('print-modal-open');
+  });
+ });
+ modal.querySelector('.print-modal-close').addEventListener('click', () => modal.close());
+ modal.addEventListener('click', event => {
+  const bounds = modal.getBoundingClientRect();
+  if(event.target === modal && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) modal.close();
+ });
+ modal.addEventListener('close', () => {
+  document.body.classList.remove('print-modal-open');
+  trigger?.focus({preventScroll:true});
+ });
+})();
+</script>
 </body>
 </html>
