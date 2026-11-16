@@ -28,6 +28,8 @@ body{font-size:16px;line-height:1.8}h1,h2,h3{font-family:var(--body);text-transf
 @media(max-width:1000px){.subs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.subs{grid-template-columns:1fr}}
 
+.depo .dgrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:start}
+@media(max-width:767px){.depo .dgrid{grid-template-columns:1fr;gap:24px;max-width:540px;margin-inline:auto}}
 .dgrid .testimonial-print{padding:0;overflow:hidden;background:transparent;border:1px solid #314153;border-radius:6px;min-width:0}
 .dgrid .testimonial-print:before{content:none}
 .testimonial-print img{display:block;width:100%;height:auto}
