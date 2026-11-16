@@ -27,6 +27,10 @@ body{font-size:16px;line-height:1.8}h1,h2,h3{font-family:var(--body);text-transf
 .dgrid{align-items:start}.dgrid figure{min-width:0}.testimonial-original{margin-top:20px;border-top:1px solid #344552;border-bottom:0}.testimonial-original summary{font-size:13px;color:#b8cfb0;padding:15px 30px 15px 0}.testimonial-original summary:after{top:10px}.testimonial-original img{display:block;width:100%;height:auto;border-radius:4px;margin:0 0 12px}
 @media(max-width:1000px){.subs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.subs{grid-template-columns:1fr}}
+
+.dgrid .testimonial-print{padding:0;overflow:hidden;background:transparent;border:1px solid #314153;border-radius:6px;min-width:0}
+.dgrid .testimonial-print:before{content:none}
+.testimonial-print img{display:block;width:100%;height:auto}
 </style>
 </head>
 <body>
@@ -113,10 +117,10 @@ body{font-size:16px;line-height:1.8}h1,h2,h3{font-family:var(--body);text-transf
  <div class="wrap">
   <span class="eyebrow">04 / Experiências que inspiram</span><h2>Quem estudou com a Amanda conta o que mudou.</h2>
   <div class="dgrid">
-   <figure><blockquote>“Eles adoraram a minha entrevista e estão considerando a vaga remota.”</blockquote><figcaption>Relato enviado à professora Amanda Athayde</figcaption><details class="testimonial-original"><summary>Ver depoimento original</summary><img src="assets/v2/depoimento-1.png" alt="Depoimento 1: mensagem original enviada à professora Amanda Athayde" loading="lazy"></details></figure>
-   <figure><blockquote>“O curso é ótimo! As aulas são muito ricas, com bastante conteúdo e, ao mesmo tempo, objetivas.”</blockquote><figcaption>Relato enviado à professora Amanda Athayde</figcaption><details class="testimonial-original"><summary>Ver depoimento original</summary><img src="assets/v2/depoimento-2.png" alt="Depoimento 2: mensagem original enviada à professora Amanda Athayde" loading="lazy"></details></figure>
-   <figure><blockquote>“Estou adorando a pós! Foi, sem dúvida, o melhor investimento que fiz ano passado.”</blockquote><figcaption>Relato enviado à professora Amanda Athayde</figcaption><details class="testimonial-original"><summary>Ver depoimento original</summary><img src="assets/v2/depoimento-3.png" alt="Depoimento 3: mensagem original enviada à professora Amanda Athayde" loading="lazy"></details></figure>
-   <figure><blockquote>“A questão da prática também tem me agradado muito, todos os temas têm casos concretos e instigam muito.”</blockquote><figcaption>Relato enviado à professora Amanda Athayde</figcaption><details class="testimonial-original"><summary>Ver depoimento original</summary><img src="assets/v2/depoimento-4.png" alt="Depoimento 4: mensagem original enviada à professora Amanda Athayde" loading="lazy"></details></figure>
+   <figure class="testimonial-print"><img src="assets/v2/depoimento-1.png" alt="Depoimento 1: mensagem original enviada à professora Amanda Athayde" loading="lazy"></figure>
+   <figure class="testimonial-print"><img src="assets/v2/depoimento-2.png" alt="Depoimento 2: mensagem original enviada à professora Amanda Athayde" loading="lazy"></figure>
+   <figure class="testimonial-print"><img src="assets/v2/depoimento-3.png" alt="Depoimento 3: mensagem original enviada à professora Amanda Athayde" loading="lazy"></figure>
+   <figure class="testimonial-print"><img src="assets/v2/depoimento-4.png" alt="Depoimento 4: mensagem original enviada à professora Amanda Athayde" loading="lazy"></figure>
   </div>
   <button type="button" class="btn" aria-disabled="true">Quero me inscrever</button>
  </div>
