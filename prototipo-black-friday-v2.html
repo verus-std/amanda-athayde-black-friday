@@ -22,6 +22,11 @@ body{font-size:16px;line-height:1.8}h1,h2,h3{font-family:var(--body);text-transf
 @media(max-width:700px){.bar .wrap{min-height:73px}.cd span{font-size:22px}.brand-row{justify-content:space-between;gap:15px;margin-bottom:280px;align-items:center}.official-logo{width:145px}.brand{font-size:29px;padding-left:15px}.brand small{font-size:6px;letter-spacing:1px}.hero{padding-top:28px;min-height:0;padding-bottom:45px}.hero:before{height:460px;background-size:auto 460px;background-position:69% top}.hero:after{background:linear-gradient(180deg,#0e172622 200px,#0a111e 440px)}.hero-name{top:295px;right:20px;bottom:auto;font-size:10px;padding:9px 12px}.hero-name small{font-size:9px}.hero h1{font-size:39px;letter-spacing:-1.2px;line-height:1.13;max-width:100%}.hero p{font-size:14px;max-width:100%;margin:22px 0}.hero p strong{font-size:13px}.tag{font-size:9px}.btn{font-size:11px;gap:18px}.ribbon{font-size:10px;padding:16px 20px}.proof b{font-size:31px}.proof span{font-size:11px}.intro h2{font-size:33px}.lead{font-size:16px}.item.main h3{font-size:25px}.subs div:before{font-size:25px}.audience h2{font-size:35px}.depo h2{font-size:32px}.prof h2{font-size:33px}.photo:after{font-size:26px}.offer h2{font-size:33px}.now{font-size:53px}.faq h2{font-size:34px}.final h2{font-size:33px}.final p{font-size:14px}.footer-logo{width:105px}}
 @media(max-width:360px){.official-logo{width:125px}.brand{font-size:25px;padding-left:10px}.hero h1{font-size:35px}}
 
+
+.subs{grid-template-columns:repeat(4,minmax(0,1fr))}
+.dgrid{align-items:start}.dgrid figure{min-width:0}.testimonial-original{margin-top:20px;border-top:1px solid #344552;border-bottom:0}.testimonial-original summary{font-size:13px;color:#b8cfb0;padding:15px 30px 15px 0}.testimonial-original summary:after{top:10px}.testimonial-original img{display:block;width:100%;height:auto;border-radius:4px;margin:0 0 12px}
+@media(max-width:1000px){.subs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.subs{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -49,8 +54,8 @@ body{font-size:16px;line-height:1.8}h1,h2,h3{font-family:var(--body);text-transf
 
 <div class="proof">
  <div class="wrap">
-  <div><b>174</b><span>aulas nos 5 cursos da pós</span></div>
-  <div><b>7</b><span>cursos e módulos no total</span></div>
+  <div><b>8</b><span>módulos na pós-graduação</span></div>
+  <div><b>2</b><span>cursos complementares incluídos</span></div>
   <div><b>R$ 18.497</b><span>em conteúdos incluídos</span></div>
   <div><b>3×</b><span>vencedora do Concurrences Antitrust Writing Awards</span></div>
  </div>
@@ -74,11 +79,14 @@ body{font-size:16px;line-height:1.8}h1,h2,h3{font-family:var(--body);text-transf
     <div><h3>Pós-Graduação em Direito Concorrencial</h3><p>Formação abrangente, dos fundamentos aos temas mais avançados do antitruste.</p></div>
     <div class="price"><s>R$ 15.000,00</s></div>
     <div class="subs">
-     <div><b>37 aulas</b>Atos de Concentração: estruturação, notificação e defesa no CADE</div>
-     <div><b>38 aulas</b>Condutas Unilaterais: preço predatório, recusa de contratar, venda casada, mercados digitais</div>
-     <div><b>36 aulas</b>Fundamentos e Interfaces: IA, plataformas, dados, Direito Penal e compliance</div>
-     <div><b>28 aulas</b>Condutas Coordenadas: identificação e prova de cartéis</div>
-     <div><b>35 aulas</b>Acordos Antitruste: leniência e TCC</div>
+     <div>Fundamentos Históricos e Normativos do Direito da Concorrência</div>
+     <div>Controle Repressivo de Condutas: Aspectos Introdutórios</div>
+     <div>Controle Repressivo de Condutas Coordenadas</div>
+     <div>Acordo de Leniência e Antitruste</div>
+     <div>Termo de Compromisso de Cessação (TCC) Antitruste</div>
+     <div>Controle Repressivo e Condutas Unilaterais</div>
+     <div>Antitruste e Interfaces</div>
+     <div>Controle Preventivo de Estruturas e Análise de Atos de Concentração</div>
     </div>
    </div>
    <div class="item"><div><h3>Direito Administrativo Sancionador Concorrencial</h3><p>Como o Direito Administrativo Sancionador se aplica ao contexto concorrencial.</p></div><div class="price"><s>R$ 2.500,00</s></div></div>
@@ -101,15 +109,14 @@ body{font-size:16px;line-height:1.8}h1,h2,h3{font-family:var(--body);text-transf
  </div>
 </section>
 
-<!-- DEPOIMENTOS: substitua nomes, cargos e textos por depoimentos reais (com autorização) antes de divulgar. -->
 <section class="depo" id="depoimentos">
  <div class="wrap">
-  <span class="eyebrow">04 / Experiências que inspiram</span><h2>Quem estudou com a Amanda conta o que mudou.</h2><p class="placeholder-note">Depoimentos ilustrativos do layout · nomes e relatos a validar.</p>
+  <span class="eyebrow">04 / Experiências que inspiram</span><h2>Quem estudou com a Amanda conta o que mudou.</h2>
   <div class="dgrid">
-   <figure><blockquote>“Saí do básico e passei a ler uma operação de concentração com segurança. Hoje participo das discussões concorrenciais do escritório.”</blockquote><figcaption><span class="av">N</span><span><b>[Nome e sobrenome]</b>Advogada · [cidade]</span></figcaption></figure>
-   <figure><blockquote>“As aulas de leniência e TCC são práticas e diretas. Apliquei o conteúdo no meu trabalho já nas primeiras semanas.”</blockquote><figcaption><span class="av">N</span><span><b>[Nome e sobrenome]</b>Advogado · [cidade]</span></figcaption></figure>
-   <figure><blockquote>“Mesmo atuando fora da área jurídica, consegui acompanhar tudo. A didática da Amanda deixa o antitruste claro.”</blockquote><figcaption><span class="av">N</span><span><b>[Nome e sobrenome]</b>Servidor público · [órgão]</span></figcaption></figure>
-   <figure><blockquote>“Comecei a pós ainda na graduação e cheguei à formatura com um diferencial real no currículo e nas entrevistas.”</blockquote><figcaption><span class="av">N</span><span><b>[Nome e sobrenome]</b>Recém-formada · [universidade]</span></figcaption></figure>
+   <figure><blockquote>“Eles adoraram a minha entrevista e estão considerando a vaga remota.”</blockquote><figcaption>Relato enviado à professora Amanda Athayde</figcaption><details class="testimonial-original"><summary>Ver depoimento original</summary><img src="assets/v2/depoimento-1.png" alt="Depoimento 1: mensagem original enviada à professora Amanda Athayde" loading="lazy"></details></figure>
+   <figure><blockquote>“O curso é ótimo! As aulas são muito ricas, com bastante conteúdo e, ao mesmo tempo, objetivas.”</blockquote><figcaption>Relato enviado à professora Amanda Athayde</figcaption><details class="testimonial-original"><summary>Ver depoimento original</summary><img src="assets/v2/depoimento-2.png" alt="Depoimento 2: mensagem original enviada à professora Amanda Athayde" loading="lazy"></details></figure>
+   <figure><blockquote>“Estou adorando a pós! Foi, sem dúvida, o melhor investimento que fiz ano passado.”</blockquote><figcaption>Relato enviado à professora Amanda Athayde</figcaption><details class="testimonial-original"><summary>Ver depoimento original</summary><img src="assets/v2/depoimento-3.png" alt="Depoimento 3: mensagem original enviada à professora Amanda Athayde" loading="lazy"></details></figure>
+   <figure><blockquote>“A questão da prática também tem me agradado muito, todos os temas têm casos concretos e instigam muito.”</blockquote><figcaption>Relato enviado à professora Amanda Athayde</figcaption><details class="testimonial-original"><summary>Ver depoimento original</summary><img src="assets/v2/depoimento-4.png" alt="Depoimento 4: mensagem original enviada à professora Amanda Athayde" loading="lazy"></details></figure>
   </div>
   <button type="button" class="btn" aria-disabled="true">Quero me inscrever</button>
  </div>
@@ -157,7 +164,7 @@ body{font-size:16px;line-height:1.8}h1,h2,h3{font-family:var(--body);text-transf
   <details><summary>Até quando posso me inscrever?</summary><p>As inscrições da Black Friday começam em 17 de novembro e encerram em 24 de novembro.</p></details>
   <details><summary>O curso é 100% on-line?</summary><p>Sim. É a única pós-graduação on-line em Direito Concorrencial do Brasil.</p></details>
   <details><summary>Quanto tempo de acesso ao curso?</summary><p>Você tem 1 ano de acesso ao curso.</p></details>
-  <details><summary>Quais cursos estão incluídos?</summary><p>A pós-graduação completa (cinco cursos), o curso de Direito Administrativo Sancionador Concorrencial e o curso de Comércio Internacional, Defesa Comercial e Novos Instrumentos.</p></details>
+  <details><summary>Quais cursos estão incluídos?</summary><p>A pós-graduação completa (oito módulos), o curso de Direito Administrativo Sancionador Concorrencial e o curso de Comércio Internacional, Defesa Comercial e Novos Instrumentos.</p></details>
  </div></div>
 </section>
 
